@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<pre>
+    <code>
+    depthFirstSearchInOrder(){
+        let visited = [];
+        function traverse(node){
+            if(node.left) traverse(node.left);
+            visited.push(node.value);
+            if(node.right) traverse(node.right);
+        }
+        traverse(this.root);
+        return visited;
+    }
+    </code>
+</pre>
+</body>
+</html>
