@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<pre>
+    <code>
+function searchNode(node, value) {
+    if (node === null) {
+        return false;
+    }
+    if (value < node.value) {
+        return searchNode(node.left, value);
+    } else if (value > node.value) {
+        return searchNode(node.right, value);
+    } else {
+        return node;
+    }
+}
+
+//      10
+//   5     13
+// 2  7  11  16
+    </code>
+</pre>
+</body>
+</html>

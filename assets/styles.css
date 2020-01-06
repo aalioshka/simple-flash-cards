@@ -46,3 +46,10 @@ body { font-family: sans-serif; }
     background-color: #F7F7F7;
     transform: rotateY(180deg);
 }
+
+iframe {
+    overflow: scroll !important;
+    width: 100%;
+    height: 100%;
+    border: none !important;
+}
