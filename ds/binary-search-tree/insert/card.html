@@ -6,6 +6,15 @@
 </head>
 <pre>
     <code>
+insert(value){
+    let newNode = new Node(value);
+    if (this.root === null) {
+        this.root = newNode;
+    } else {
+        insertNode(this.root, newNode);
+    }
+}
+
 function insertNode(node, newNode) {
     if (newNode.value < node.value) {
         if (node.left === null) {
