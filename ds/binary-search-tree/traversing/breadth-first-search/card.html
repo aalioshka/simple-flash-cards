@@ -7,20 +7,28 @@
 <body>
 <pre>
     <code>
-breadthFirstSearch(){
-    let node = this.root;
-    let visited = [];
-    let queue = [];
-    queue.push(node);
+    breadthFirstSearch(){
+        let node = this.root;
+        let visited = [];
+        let queue = [];
+        queue.push(node);
 
-    while(queue.length){
-        node = queue.shift();
-        visited.push(node.value);
-        if(node.left) queue.push(node.left);
-        if(node.right) queue.push(node.right);
+        while(queue.length){
+            node = queue.shift();
+            visited.push(node.value);
+            if(node.left) queue.push(node.left);
+            if(node.right) queue.push(node.right);
+        }
+        return visited;
     }
-    return visited;
-}
+
+//      10
+//   5     13
+// 2  7  11  16
+
+let tree = new BinarySearchTree();
+tree.insert(...);
+let bfs = tree.breadthFirstSearch(); // [10, 5, 13, 2, 7, 11, 16]
     </code>
 </pre>
 </body>
