@@ -5,11 +5,13 @@ function onCardClick(el) {
 function onCardLoad() {
     getCardTitle();
     getCardIframeUrl();
+    getCardImgUrl();
 }
 
-function setCardState(title, iframeUrl) {
+function setCardState(title, iframeUrl, cardImgUrl) {
     sessionStorage.setItem('cardTitle', title);
     sessionStorage.setItem('cardIframeUrl', iframeUrl);
+    sessionStorage.setItem('cardImgUrl', cardImgUrl);
 }
 
 function getCardTitle() {
@@ -25,4 +27,9 @@ function getCardIframeUrl() {
     iframe.src = sessionStorage.getItem('cardIframeUrl');
 }
 
-
+function getCardImgUrl() {
+    let img = document.querySelector('img');
+    if(img){
+        img.src = sessionStorage.getItem('cardImgUrl') || '';
+    }
+}

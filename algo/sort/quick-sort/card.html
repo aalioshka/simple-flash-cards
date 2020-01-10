@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function getCardImgUrl() {
+            let img = document.querySelector('img');
+            if(img){
+                img.src = sessionStorage.getItem('cardImgUrl') || '';
+            }
+        }
+    </script>
+</head>
+<body onload="getCardImgUrl()">
+<div class="scroll-container">
+<pre>
+    <code>
+    function quickSort(nums) {
+        if (nums.length < 2) {
+            return nums;
+        }
+
+        const pivot = nums[nums.length-1];
+        let left = [];
+        let right = [];
+
+        for (let i = 0; i < nums.length-1; i++) {
+            if (nums[i] < pivot) {
+                left.push(nums[i]);
+            } else {
+                right.push(nums[i]);
+            }
+        }
+
+        return [...quickSort(left), pivot, ...quickSort(right)];
+        // or without spread operator with concat:
+        // return quickSort(left).concat(pivot, quickSort(right));
+    }
+    </code>
+</pre>
+<img src="{{src placeholder}}">
+</div>
+</body>
+</html>
