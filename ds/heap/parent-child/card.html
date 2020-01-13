@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function getCardImgUrl() {
+            let img = document.querySelector('img');
+            if(img){
+                img.src = sessionStorage.getItem('cardImgUrl') || '';
+            }
+        }
+    </script>
+</head>
+<body onload="getCardImgUrl()">
+<div class="scroll-container">
+<pre>
+    <code>
+<b>Children:</b>
+For any index of an array n...
+let leftChildIdx = 2 * idx + 1;
+let rightChildIdx = 2 * idx + 2;
+//**************************************//
+<b>Parent:</b>
+For any child node at index n...
+Its parent is at:
+let parentIdx = Math.floor((idx - 1)/2);
+    </code>
+</pre>
+    <img style="width:100vw" src="{{src placeholder}}">
+</div>
+</body>
+</html>
