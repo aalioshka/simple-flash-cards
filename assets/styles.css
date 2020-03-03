@@ -1,9 +1,9 @@
 body { font-family: sans-serif; }
 
 .scene {
-    width: 50vw;
-    height: 50vh;
-    margin: 25vh 25vw;
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 10vw;
 }
 
 .card {
@@ -41,7 +41,7 @@ body { font-family: sans-serif; }
 .card__face--back {
     background-color: #F7F7F7;
     transform: rotateY(180deg);
-    height: 50vh;
+    height: 80vh;
     overflow: scroll;
 }
 
