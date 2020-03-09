@@ -34,7 +34,7 @@ class Graph{
         const visited = {};
         const adjacencyList = this.adjacencyList;
 
-        (function dfs(vertex){
+        function dfs(vertex){
             if(!vertex) return null;
             visited[vertex] = true;
             result.push(vertex);
@@ -43,7 +43,8 @@ class Graph{
                     return dfs(neighbor)
                 }
             });
-        })(start);
+        }
+        dfs(start);
 
         return result;
     }
@@ -70,8 +71,12 @@ g.addEdge("D","F");
 g.addEdge("E","F");
 
 const dfr = g.depthFirstRecursive("A");
+const dfi = g.depthFirstIterative("A");
+const bf = g.breadthFirst("A");
 
 console.log(dfr); // ["A","B","D","E","C","F"]
+console.log(dfi); // ["A","C","E","F","D","B"]
+console.log(bf); // ["A","B","C","D","E","F"]
 
 //          A
 //        /   \
