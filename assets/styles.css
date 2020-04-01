@@ -38,6 +38,12 @@ body { font-family: sans-serif; }
     font-weight: bold;
 }
 
+.card__face--front--body {
+    text-align: center;
+    padding-top: 50vh;
+    font-weight: bold;
+}
+
 .card__face--back {
     background-color: #F7F7F7;
     transform: rotateY(180deg);
