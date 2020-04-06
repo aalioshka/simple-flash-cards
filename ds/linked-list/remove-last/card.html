@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    function getCardImgUrl() {
+      let img = document.querySelector('img');
+      if(img){
+        img.src = sessionStorage.getItem('cardImgUrl') || '';
+      }
+    }
+  </script>
+</head>
+<body onload="getCardImgUrl()">
+  <div class="scroll-container">
+    <pre>
+        <code>
+      removeLast() {
+        if (!this.head) {
+          return;
+        }
+
+        if (!this.head.next) {
+          this.head = null;
+          return;
+        }
+
+        let previous = this.head;
+        let node = this.head.next;
+        while (node.next) {
+          previous = node;
+          node = node.next;
+        }
+        previous.next = null;
+      }
+        </code>
+    </pre>
+    <img style="width:100vw" src="{{src placeholder}}">
+  </div>
+</body>
+</html>
