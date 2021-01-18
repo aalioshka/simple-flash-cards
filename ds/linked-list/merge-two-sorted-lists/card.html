@@ -7,7 +7,7 @@
     function getCardImgUrl() {
       let img = document.querySelector('img');
       if(img){
-        img.src = sessionStorage.getItem('cardImgUrl') || '';
+        img.src = localStorage.getItem('cardImgUrl') || '';
       }
     }
   </script>
